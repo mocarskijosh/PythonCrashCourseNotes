@@ -153,4 +153,88 @@ $ python dictionaryExamples.py
 ...
 Total number of aliens: 30
 
+
+# List in a Dictionary
+
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+}
+
+# Summarize the order. 
+print("You ordered a " + pizza['crust'] + "-crust pizza " +
+    "with the following toppings:")
+
+for toppings in pizza['toppings']:
+    print("\t" + toppings)
+
+=>
+You ordered a thick-crust pizza with the following toppings:
+        mushrooms
+        extra cheese
+
+# Example
+favoriteLanguages = {
+    'jen': ['python', 'ruby'],
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'haskell']
+}
+
+for name, languages in favoriteLanguages.items():
+    print("\n" + name.title() + "'s favorite languages are:")
+    for language in languages:
+        print("\t" + language.title())
+
+=>
+$ python dictionaryExamples.py
+
+Jen's favorite languages are:
+        Python
+        Ruby
+
+Sarah's favorite languages are:
+        C
+
+Edward's favorite languages are:
+        Ruby
+        Go
+
+Phil's favorite languages are:
+        Python
+        Haskell
+
+# Dictionary in a Dictionary
+users = {
+    'aeinstein': {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princeton',
+    },
+    'mcurie': {
+        'first': 'marie',
+        'last': 'curie',
+        'location': 'paris',
+    },
+}
+
+for username, userInfo in users.items():
+    print("\nUsername: " + username)
+    fullName = userInfo['first'] + " " + userInfo['last']
+    location = userInfo['location']
+
+    print("\tFull Name: " + fullName.title())
+    print("\tLocation: " + location.title())
+
+=>
+$ python dictionaryExamples.py
+
+Username: aeinstein
+        Full Name: Albert Einstein
+        Location: Princeton
+
+Username: mcurie
+        Full Name: Marie Curie
+        Location: Paris
+
 '''
