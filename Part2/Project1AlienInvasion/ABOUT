@@ -1,0 +1,11 @@
+Use the Pygame package to develop a 2D game whose aim is to shoot down 
+    a fleet of aliens as they drop down the screen in levels that increase in speed and difficulty.
+
+Pygame - 
+    Modules that manage graphics, animation, and sound
+    Ex.
+        Drawing images to the screen
+
+
+Install from - (https://www.lfd.uci.edu/~gohlke/pythonlibs/#pygame)
+    pygame-1.9.4-cp37-cp37m-win32.whl
